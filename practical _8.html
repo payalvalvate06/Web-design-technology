@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Website Example</title>
+    <style>
+        /* Mobile-First Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header, footer {
+            background-color: lightgray;
+            color: blueviolet;
+            padding: 10px;
+            text-align: center;
+        }
+        header img {
+            width: 600px;
+            height: 350px; /* Responsive image */
+        }
+        nav {
+            background-color: lightseagreen;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: inline-block;
+        }
+        nav a:hover,
+        nav a:focus {
+            background-color: green;
+        }
+        main {
+            padding: 20px;
+        }
+        /* Form styles */
+        form {
+            display: block;
+            width: 100%;
+        }
+        input, textarea, button{
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            background-color: aliceblue;
+        }
+        button{
+            background-color: green;
+        }
+        .skip-link {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: transparent;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            z-index: 1000;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        /* Media Queries for Larger Screens (Tablets and Desktops) */
+        @media (min-width: 600px) {
+            nav {
+                text-align: left;
+                padding: 10px 20px;
+            }
+            nav a {
+                padding: 10px 15px;
+            }
+            main {
+                padding: 40px;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            form {
+                width: 50%;
+                margin: 0 auto;
+            }
+        }
+        @media (min-width: 1024px) {
+            nav a {
+                font-size: 18px;
+            }
+            header h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip Link for Screen Reader Users -->
+    <a href="#main-content" class="skip-link" id="skip-link">Skip to main content</a>
+
+    <header role="banner">
+        <h1>PEARL RESORT</h1>
+        <img src="resort.jpg" alt="View of Pearl Resort" />
+        <p>Welcome To Pearl Resort.<br>ENJOY YOUR VACATION ,TRIP WITH OUR PLACE!!</p>
+    </header>
+
+    <nav role="navigation">
+        <ul>
+            <li><a href="#home" title="Go to Home" accesskey="h">Home</a></li>
+            <li><a href="#about" title="Learn About Us" accesskey="a">About</a></li>
+            <li><a href="#contact" title="Contact Us" accesskey="c">Contact</a></li>
+        </ul>
+    </nav>
+    <main id="main-content" role="main">
+        <section>
+            <h2>About Us</h2>
+            <p>Full-sized luxury facilities with full-service accommodations and amenities. These hotels may attract vacationing tourists and offer more than a convenient place to stay.</p>
+        </section>
+
+        <section id="sectiona">
+            <h2>Dining Area</h2>
+            <img src="dinning.jpg" alt="Dining area with tables and chairs" height="200px" width="100%">
+        </section>
+
+        <section id="sectionb">
+            <h2>Pool Area</h2>
+            <img src="pool.jpg" alt="Swimming pool with lounge chairs" height="200px" width="100%">
+        </section>
+
+        <section id="sectionc">
+            <h2>Accessible Form</h2>
+            <form action="/submit" method="POST">
+                <label for="name" id="name-label">Your Name:</label>
+                <input type="text" id="name" name="name" aria-labelledby="name-label" placeholder="Enter your name" required>
+
+                <label for="email" id="email-label">Your Email:</label>
+                <input type="email" id="email" name="email" aria-labelledby="email-label" placeholder="Enter your email" required>
+
+                <label for="message" id="message-label">Your Message:</label>
+                <textarea id="message" name="message" aria-labelledby="message-label" placeholder="Book a place" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2024 Accessible Website. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
