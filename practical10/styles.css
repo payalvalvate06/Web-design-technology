@@ -1,0 +1,34 @@
+body {
+  background-color: pink;
+}
+
+header h1 {
+  background-color: rgb(200, 48, 73);
+  font-family: sans-serif;
+  color: rgb(231, 236, 240);
+}
+header nav ul li a {
+  color: rgb(231, 236, 240);
+  background-color: rgb(140, 74, 216);
+  font-family: verdana;
+}
+header main .hero h2 {
+  font-family: verdana;
+  color: rgb(200, 48, 73);
+}
+header main .hero a {
+  color: rgb(140, 74, 216);
+  font-family: verdana;
+}
+header main .hero a:hover {
+  color: rgb(33, 161, 67);
+}
+header main .class #collection-heading {
+  background-color: pink;
+  color: rgb(231, 236, 240);
+}
+header .collections .collection-grid .collection-item h3 {
+  font-family: sans-serif;
+  font-style: italic;
+  color: rgb(200, 48, 73);
+}/*# sourceMappingURL=styles.css.map */

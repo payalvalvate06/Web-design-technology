@@ -1,0 +1,45 @@
+$main-color:rgb(200, 48, 73);
+$main-font:verdana;
+$font-color:rgb(231, 236, 240);
+$back-color:pink;
+$fonts:sans-serif;
+$mycolor:rgb(140, 74, 216);
+body{
+    background-color: $back-color;
+}
+header{
+ h1{
+    background-color: $main-color;
+    font-family: sans-serif;
+    color: $font-color;
+}
+ nav ul li a{
+color:$font-color;
+background-color:$mycolor;
+font-family: $main-font;
+}
+main{
+ .hero {
+    h2{
+        font-family: $main-font;
+        color: $main-color;
+        }
+        a{
+            color: $mycolor;
+            font-family: $main-font;
+        &:hover{
+            color: rgb(33, 161, 67);
+        }
+        }
+}
+.class #collection-heading{
+    background-color: $back-color;
+    color: $font-color;
+}
+}
+.collections .collection-grid .collection-item h3{
+font-family: $fonts;
+font-style: italic;
+color:$main-color;
+}
+}
